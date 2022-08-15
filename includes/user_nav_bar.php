@@ -44,8 +44,8 @@
 		 	<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 		        <ul class="nav navbar-nav nav_1">
 		            <li><a href="user_profile.php?id=<?php echo $id;?>">My Profile</a></li>
-		            <li><a href="partner_preference.php?id=<?php echo $id;?>">Partner Preference</a></li>
-					<li><a href="available_profiles.php">Find Match</a></li>
+		            <li><a href="update_partner_preferences.php?id=<?php echo $id;?>">Partner Preference</a></li>
+					<li><a href="find_match.php">Find Match</a></li>
 		    		<li class="dropdown">
 
 
@@ -54,7 +54,7 @@
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Edit Profile<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
 		               
-                      <li><a href="photouploader.php?id=<?php echo $id;?>">Upload Photo</a></li>
+                      <li><a href="upload_profile_pictures.php?id=<?php echo $id;?>">Upload Photo</a></li>
 		            
 		               <li><a href="update_user_info.php?id=<?php echo $id;?>">Edit Profile</a></li>  
 		              </ul>
@@ -64,7 +64,7 @@
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
-		                <li><a href="search.php">Regular Search</a></li>
+		                <li><a href="search_profiles.php">Regular Search</a></li>
 		                
 		              </ul>
 					  <li><a href="index.php">Logout</a></li>  
