@@ -3,10 +3,10 @@
 $host="localhost";
 $username="root";
 $password="";
-$db_name="matrimony_project_db";
+$database_name="matrimony_project_db";
 
-$conn=mysqli_connect("$host", "$username", "$password"); 
+$connect=mysqli_connect("$host", "$username", "$password"); 
 
-mysqli_select_db($conn,"$db_name");
+mysqli_select_db($connect,"$database_name");
 
 ?>
