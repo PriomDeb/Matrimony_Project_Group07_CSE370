@@ -10,12 +10,12 @@ function signup(){
         $day=$_POST['day'];
         $month=$_POST['month'];
         $year=$_POST['year'];
-            $day=$_POST['day'];
-            $month=$_POST['month'];
-            $year=$_POST['year'];
+        $day=$_POST['day'];
+        $month=$_POST['month'];
+        $year=$_POST['year'];
         $dob=$year ."-" . $month . "-" .$day ;
         $gender=$_POST['gender'];
-        require_once("includes/dbconn.php");
+        include("includes/connect_database.php");
     
         $sql = "INSERT INTO users (profilestat, username, password, email, dateofbirth, gender, userlevel) 
                 VALUES(0, '$uname', '$pass', '$email', '$dob', '$gender', 0)";
@@ -27,7 +27,8 @@ function signup(){
           echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
-
 }
+
+
 
 ?>
