@@ -17,8 +17,8 @@ function signup(){
         $gender=$_POST['gender'];
         include("includes/connect_database.php");
     
-        $sql = "INSERT INTO users (profilestat, username, password, email, dateofbirth, gender, userlevel) 
-                VALUES(0, '$uname', '$pass', '$email', '$birth_date', '$gender', 0)";
+        $sql = "INSERT INTO users (profile_status, username, password, email, dateofbirth, gender) 
+                VALUES(0, '$uname', '$pass', '$email', '$birth_date', '$gender')";
         
         if (mysqli_query($connect,$sql)) {
             echo "<script> alert('You successfully signed up!');
