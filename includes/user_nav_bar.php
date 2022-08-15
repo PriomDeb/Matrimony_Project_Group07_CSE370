@@ -43,7 +43,7 @@
  
 		 	<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 		        <ul class="nav navbar-nav nav_1">
-		            <li><a href="view_profile.php?id=<?php echo $id;?>">My Profile</a></li>
+		            <li><a href="user_profile.php?id=<?php echo $id;?>">My Profile</a></li>
 		            <li><a href="partner_preference.php?id=<?php echo $id;?>">Partner Preference</a></li>
 					<li><a href="available_profiles.php">Find Match</a></li>
 		    		<li class="dropdown">
@@ -56,7 +56,7 @@
 		               
                       <li><a href="photouploader.php?id=<?php echo $id;?>">Upload Photo</a></li>
 		            
-		               <li><a href="create_profile.php?id=<?php echo $id;?>">Edit Profile</a></li>  
+		               <li><a href="update_user_info.php?id=<?php echo $id;?>">Edit Profile</a></li>  
 		              </ul>
 		            </li>
 
