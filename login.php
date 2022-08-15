@@ -10,9 +10,11 @@ $final = $results -> fetch_assoc();
 
 $_SESSION["email"] = $final["email"];
 $_SESSION["password"] = $final["password"];
+$_SESSION["id"] = $final["id"];
 
 if($email=$final["email"] AND $password=$final["password"]){
-    echo "Successfully loged in.";
+    // echo "Logged in";
+    header("location: user_home.php?id={$final['id']}");
 }
 else{
     echo "<script> alert('Wrong email and password combination/No account found!');

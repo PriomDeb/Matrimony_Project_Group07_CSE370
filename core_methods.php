@@ -33,5 +33,15 @@ function signup(){
 }
 
 
+function isLogged(){
+    if(!isset($_SESSION['id'])){
+        return false;
+   }
+   else{
+       return true;
+   }
+}
+
+
 
 ?>

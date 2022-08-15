@@ -6,7 +6,7 @@
            <div class="navigation">
              
            </div>
-           <a class="brand" href="index.php"><img src="images/logo.png" alt="logo"></a>
+           <a class="brand" href="index.php"><img src="images/matrimony_logo.png" alt="logo" width="100" alt="logo"></a>
            <div class="pull-right">
           	<nav class="navbar nav_bottom" role="navigation">
  
