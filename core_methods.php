@@ -21,8 +21,8 @@ function signup(){
                 VALUES(0, '$uname', '$pass', '$email', '$birth_date', '$gender')";
         
         if (mysqli_query($connect,$sql)) {
-            echo "<script> alert('You successfully signed up!');
-            window.location.href='index.php';
+            echo "<script> alert('You successfully signed up! Now login to update and view your profile.');
+            window.location.href='login_page.php';
             </script>
             ";
         
