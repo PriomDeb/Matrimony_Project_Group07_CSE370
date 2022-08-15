@@ -10,7 +10,7 @@
 				  <ul>
 
 
-                  
+
                   <!-- Edited -->
 				  <?php 
 				  if(isLogged()){
@@ -47,13 +47,20 @@
 		            <li><a href="partner_preference.php?id=<?php echo $id;?>">Partner Preference</a></li>
 					<li><a href="available_profiles.php">Find Match</a></li>
 		    		<li class="dropdown">
+
+
+                    <!-- Edited  -->
+                    <!-- ---------------------------------------- -->
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Edit Profile<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
-		               <li><a href="photouploader.php?id=<?php echo $id;?>">Update Photo</a></li>
+		               
+                      <li><a href="photouploader.php?id=<?php echo $id;?>">Upload Photo</a></li>
 		            
 		               <li><a href="create_profile.php?id=<?php echo $id;?>">Edit Profile</a></li>  
 		              </ul>
 		            </li>
+
+                    
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
