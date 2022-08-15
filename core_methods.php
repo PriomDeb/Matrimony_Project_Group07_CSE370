@@ -80,6 +80,9 @@ function update_profile($id){
     $bloodGroup=$_POST['blood'];
 	
 	$aboutMe=$_POST['about_me'];
+
+    $father_info=$_POST['father'];
+    $mother_info=$_POST['mother'];
 	
 
 	include("includes/connect_database.php");
@@ -110,13 +113,15 @@ if(mysqli_num_rows($result)>=1){
         sisters_number = '$sister',
         brothers_number = '$brother', 
         blood_group = '$bloodGroup',
-		about_me = '$aboutMe'
+		about_me = '$aboutMe',
+        father_name_and_occupation = '$father_info',
+        mother_name_and_occupation = '$mother_info'
 		WHERE user_id=$id;";
 
 //    $result=mysqlexec($sql);
    if (mysqli_query($connect,$sql)) {
    	echo "<script>alert(\"Successfully Updated Profile\")</script>";
-   	echo "<script> window.location=\"view_profile.php?id=$id\"</script>";
+   	echo "<script> window.location=\"user_profile.php?id=$id\"</script>";
    }
 }else{
 	//Insert the data
@@ -139,6 +144,8 @@ if(mysqli_num_rows($result)>=1){
                    date_of_birth, 
                    occupation,  
                    annual_income, 
+                   father_name_and_occupation,
+                   mother_name_and_occupation,
                    brothers_number,
                    sisters_number,  
                    about_me, 
@@ -159,7 +166,9 @@ if(mysqli_num_rows($result)>=1){
                    '$bloodGroup',
                    '$birthDate', 
                    '$occupation',  
-                   '$annualIncome',  
+                   '$annualIncome',
+                   '$father_info',
+                   '$mother_info',  
                    '$brother', 
                    '$sister', 
                    '$aboutMe', 

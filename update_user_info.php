@@ -392,11 +392,12 @@ include("includes/user_nav_bar.php");
 		      <label for="edit-name">No . Of sisters<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="sisters_number">
-	                    <option value="1">1</option>
-	                    <option value="2">2</option> 
-	                    <option value="3">3</option> 
-	                    <option value="4">4</option> 
-	                    <option value="5">5</option> 	
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option> 
+                    <option value="3">3</option> 
+                    <option value="4">4</option> 
+                    <option value="5">5</option> 	
 	                </select>
 			    </div>
 		    </div>
@@ -405,11 +406,12 @@ include("includes/user_nav_bar.php");
 		      <label for="edit-name">No . Of brothers<span class="form-required" title="This field is required.">*</span></label>
 			    <div class="select-block1">
 	                <select name="brothers_number">
-	                    <option value="1">1</option>
-	                    <option value="2">2</option> 
-	                    <option value="3">3</option> 
-	                    <option value="4">4</option> 
-	                    <option value="5">5</option> 	
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option> 
+                    <option value="3">3</option> 
+                    <option value="4">4</option> 
+                    <option value="5">5</option> 	
 	                </select>
 			    </div>
 		    </div>
@@ -438,6 +440,20 @@ include("includes/user_nav_bar.php");
 		    	<label for="about me">About Me<span class="form-required" title="This field is required.">*</span></label>
 		    	<textarea rows="5" name="about_me" placeholder="Something interesting about you ?" class="form-text"></textarea>
 		    </div>
+
+
+            <div class="form-group">
+		    	<label for="about me">Mother's Name and Occupation<span class="form-required" title="This field is required.">*</span></label>
+		    	<textarea rows="2" name="mother" placeholder="Write name, occupation" class="form-text"></textarea>
+		    </div>
+
+
+            <div class="form-group">
+		    	<label for="about me">Father's Name and Occupation<span class="form-required" title="This field is required.">*</span></label>
+		    	<textarea rows="2" name="father" placeholder="Write name, occupation" class="form-text"></textarea>
+		    </div>
+
+
 		    <div class="form-actions">
 			    <input type="submit" id="edit-submit" name="op" value="Submit" class="btn_1 submit">
 			  </div>
