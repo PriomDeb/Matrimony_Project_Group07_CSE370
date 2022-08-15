@@ -21,7 +21,10 @@ function signup(){
                 VALUES(0, '$uname', '$pass', '$email', '$dob', '$gender', 0)";
         
         if (mysqli_query($conn,$sql)) {
-            echo "Registration Successful. Go back and login.";
+            echo "<script> alert('You successfully signed up!');
+            window.location.href='index.php';
+            </script>
+            ";
         
         } else {
           echo "Error: " . $sql . "<br>" . $conn->error;
