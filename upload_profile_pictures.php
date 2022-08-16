@@ -1,3 +1,3 @@
 <?php
-echo "Upload profile picture."
+echo "Upload profile pictures."
 ?>
