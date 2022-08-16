@@ -96,7 +96,7 @@ if(mysqli_num_rows($result)>=1){
 	$sql="UPDATE
    			user_information 
 		SET
-        full_name = '$full_name',
+        full_name = '$fullName',
         sex = '$sex',
         date_of_birth = '$birthDate',
 		religion = '$religion',
