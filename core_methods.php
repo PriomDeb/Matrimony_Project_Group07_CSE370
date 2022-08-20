@@ -186,8 +186,92 @@ if(mysqli_num_rows($result)>=1){
 	  echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 }
-
 	 
+}
+
+
+
+
+
+function update_partner_preferences_info($id){
+
+    $age_min = $_POST['age_min'];
+    $age_max = $_POST['age_max'];
+    $marital_status = $_POST['marital_status'];
+    $height = $_POST['height'];
+    $religion = $_POST['religion'];
+    $education = $_POST['education'];
+    $occupation = $_POST['occupation'];
+    $country = $_POST['country'];
+    $description = $_POST['description'];
+	
+
+	include("includes/connect_database.php");
+
+	$sql="SELECT userid FROM partner_preferences WHERE userid=$id";
+	$result=mysqli_query($connect,$sql);
+
+if(mysqli_num_rows($result)>=1){
+	//there is already a profile in this table for loggedin customer
+	//update the data
+	$sql="UPDATE
+   			partner_preferences 
+		SET
+        age_min = '$age_min',
+        age_max = '$age_max',
+        marital_status = '$marital_status',
+        height = '$height',
+        religion = '$religion',
+        education = '$education',
+        occupation = '$occupation',
+        country = '$country',
+        description = '$description'
+		WHERE userid=$id;";
+
+
+   if (mysqli_query($connect,$sql)) {
+   	echo "<script>alert(\"Successfully Updated Partner Preferences\")</script>";
+   	echo "<script> window.location=\"user_profile.php?id=$id\"</script>";
+   }
+}else{
+	//Insert the data
+	$sql = "INSERT 
+				INTO
+				   partner_preferences
+				   (userid,
+                    age_min,  
+                   age_max,
+                   marital_status, 
+                   height,
+                   religion, 
+                   education,
+                   occupation,
+                   country, 
+                   description) 
+				VALUES
+				   ('$id', 
+                   '$age_min', 
+                   '$age_max',
+                   '$marital_status',
+                   '$height',
+                   '$religion',  
+                   '$education',
+                   '$occupation',
+                   '$country', 
+                   '$description')
+			";
+	if (mysqli_query($connect,$sql)) {
+        echo "<script>alert(\"Successfully Updated Partner Preferences\")</script>";
+        echo "<script> window.location=\"user_profile.php?id=$id\"</script>";
+        echo "Back to home";
+        echo "</a>";
+    
+	  
+	} 
+    else {
+	  echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+}
 }
 
 
