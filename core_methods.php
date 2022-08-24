@@ -284,4 +284,70 @@ if(mysqli_num_rows($result)>=1){
 
 
 
+
+
+
+
+
+function upload_picture($id){
+    include("includes/connect_database.php");
+    
+	$target = "User_Profiles/". $id ."/";
+    if (!file_exists($target)) {
+        mkdir($target, 0777, true);
+    }
+
+//specifying target for each file
+$target1 = $target . basename( $_FILES['picture_1']['name']);
+
+
+
+// This gets all the other information from the form
+$picture_1=($_FILES['picture_1']['name']);
+
+
+$sql="SELECT id FROM user_pictures WHERE user_id = '$id'";
+$result = mysqli_query($connect,$sql);
+
+//code part to check weather a photo already exists
+if(mysqli_num_rows($result) == 0) {
+     // no photo for curret user, do stuff...
+		$sql="INSERT INTO user_pictures (id, user_id, picture_1) VALUES ('', '$id', '$picture_1' )";
+		// Writes the information to the database
+		mysqli_query($connect,$sql);
+
+		
+} else {
+    // There is a photo for customer so up
+     $sql="UPDATE user_pictures SET picture_1 = '$picture_1' WHERE user_id=$id";
+		// Writes the information to the database
+        mysqli_query($connect,$sql);
+}
+
+// Writes the photo to the server
+if(move_uploaded_file($_FILES['picture_1']['tmp_name'], $target1))
+{
+
+// Tells you if its all ok
+echo "The files has been uploaded, and your information has been added to the directory";
+}
+else {
+
+// Gives and error if its not
+echo "Sorry, there was a problem uploading your file.";
+}
+
+}//end uploadphoto function
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
