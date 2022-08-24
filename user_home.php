@@ -55,11 +55,18 @@ include("includes/user_nav_bar.php");
 ?>
 
 
+<?php
+
+$sql_for_id = "SELECT * FROM users WHERE id='$id'";
+$get_results = $connect -> query($sql_for_id );
+$final = $get_results -> fetch_assoc();
+?>
+
 
 <div class="banner">
   <div class="container">
     <div class="banner_info">
-      <h3> Find Some Perfect Partner for You! </h3>
+      <h3> Find Some Perfect Partner for You! <?php echo $final['username'] ?> </h3>
      
     </div>
   </div>
