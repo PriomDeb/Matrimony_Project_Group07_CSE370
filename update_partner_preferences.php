@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <?php 
-///reading partnerprefs from db
+// Retrieving the data from partner_preferences
 
 		$sql="SELECT * FROM partner_preferences WHERE userid = $id";
 		$result=mysqli_query($connect, $sql);

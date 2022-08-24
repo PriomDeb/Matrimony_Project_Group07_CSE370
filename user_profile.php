@@ -327,6 +327,17 @@ $(document).ready(function(){
 				        	<tbody>
 				        	
 							    <tr class="opened">
+									<td class="day_label">Mother's Name and Occupation:</td>
+									<td class="day_value closed"><span><?php echo $father_info;?></span></td>
+								</tr>
+							    <tr class="opened">
+									<td class="day_label">Father's Name and Occupation:</td>
+									<td class="day_value closed"><span><?php echo $mother_info;?></span></td>
+								</tr>
+
+
+
+								<tr class="opened">
 									<td class="day_label">No. of Brothers :</td>
 									<td class="day_value closed"><span><?php echo $brother;?></span></td>
 								</tr>
@@ -334,6 +345,10 @@ $(document).ready(function(){
 									<td class="day_label">No. of Sisters :</td>
 									<td class="day_value closed"><span><?php echo $sister;?></span></td>
 								</tr>
+
+
+
+
 							 </tbody>
 				          </table>
 				         </div>

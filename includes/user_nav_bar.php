@@ -61,6 +61,8 @@
 		            </li>
 
                     
+					<!-- Edited  -->
+                    <!-- ---------------------------------------- -->
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">

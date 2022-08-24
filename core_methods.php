@@ -1,6 +1,7 @@
 <?php
 include("includes/connect_database.php");
 
+
 function signup(){
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -21,8 +22,15 @@ function signup(){
                 VALUES(0, '$uname', '$pass', '$email', '$birth_date', '$gender')";
         
         if (mysqli_query($connect,$sql)) {
+
+            $sql_for_id = "SELECT * FROM users WHERE email='$email'";
+            $get_results = $connect -> query($sql_for_id );
+            $final = $get_results -> fetch_assoc();
+
+            $_SESSION["id"] = $final["id"];
+
             echo "<script> alert('You successfully signed up! Now login to update and view your profile.');
-            window.location.href='login_page.php';
+            window.location.href='update_user_info.php?id={$final['id']}';
             </script>
             ";
         

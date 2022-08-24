@@ -13,7 +13,6 @@ $_SESSION["password"] = $final["password"];
 $_SESSION["id"] = $final["id"];
 
 if($email=$final["email"] AND $password=$final["password"]){
-    // echo "Logged in";
     header("location: user_home.php?id={$final['id']}");
 }
 else{
