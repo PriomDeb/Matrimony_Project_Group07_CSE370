@@ -12,31 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<?php 
-// Retrieving the data from partner_preferences
-
-		$sql="SELECT * FROM partner_preferences WHERE userid = $id";
-		$result=mysqli_query($connect, $sql);
-
-		if($result){
-			$row=mysqli_fetch_assoc($result);
-
-			$age_min=$row['age_min'];
-			$age_max=$row['age_max'];
-			$marital_status=$row['marital_status'];
-			$height=$row['height'];
-			$religion=$row['religion'];
-			$education=$row['education'];
-			$occupation=$row['occupation'];
-			$country=$row['country'];
-			$description=$row['description'];
-			
-		}
-		else{
-			echo mysqli_error($connect);
-		}
-?>
-
 
 
 
@@ -123,7 +98,7 @@ $(document).ready(function(){
                   <!-- -------------------------------------------------- -->
                   <div class="tab_box">
 				    	<h1>My Ideal Partner would be</h1>
-				    	<p><textarea name="description" rows="5" cols="150"><?php echo $description;?></textarea></p>
+				    	<p><textarea name="description" rows="5" cols="150"></textarea></p>
 				    </div>
 
 
@@ -136,7 +111,7 @@ $(document).ready(function(){
 				        		<tr class="opened">
 									<td class="day_label">Age   :</td>
 									<td class="day_value">
-									<input type="text" name="age_min" value="<?php echo $age_min; ?>">to <input type="text" name ="age_max" value="<?php echo $age_max; ?>"> 
+									<input type="text" name="age_min" value="">to <input type="text" name ="age_max" value=""> 
 									</td>
 								</tr>
 
@@ -150,8 +125,6 @@ $(document).ready(function(){
 									<td class="day_value">
 										<div class="select-block1">
 										<select name="marital_status">
-						                    <option value="<?php if($marital_status="Single"){echo "Single";} elseif ($marital_status="Married") {echo "Married";} else{echo "Divorced";}?>"><?php echo $marital_status;?></option>
-
 						                    <option value="Single">Single</option>
 						                    <option value="Married">Married</option> 
 						               		<option value="Divorsed">Divorsed</option>
@@ -169,7 +142,7 @@ $(document).ready(function(){
 								</tr>
 								<tr class="opened">
 									<td class="day_label">Height</td>
-									<td class="day_value closed"><input type="text"  id="edit-name" name="height" value="<?php echo $height;?>" size="60" maxlength="60" class="form-text">cm</td>
+									<td class="day_value closed"><input type="text"  id="edit-name" name="height" value="" size="60" maxlength="60" class="form-text">cm</td>
 								</tr>
 
 
@@ -182,10 +155,10 @@ $(document).ready(function(){
 									<td class="day_value closed"><span>
 									<div class="select-block1">
 					                    <select name="religion">
-                                        <option value="<?php echo $religion;?>"><?php echo $religion;?></option>
+                                        <option value="Not Selected">Not Selected</option>
 						                    <option value="Hindu">Hindu</option>
                                             <option value="Muslim">Muslim</option> 
-                                            <option value="Buddha">Buddha</option>
+                                            <option value="Hindu">Buddha</option>
 						                    <option value="Christian">Christian</option>
 					                    </select>
 	                 				</div></span>
@@ -200,7 +173,7 @@ $(document).ready(function(){
 									<td class="day_label">Education :</td>
 									<td class="day_value closed"><div class="select-block1">
 						                <select name="education">
-						                <option value="<?php echo $education;?>"><?php echo $education;?></option>
+						                <option value="Not Selected">Not Selected</option>
                                         <option value="SSC">SSC</option>
                                         <option value="HSC">HSC</option> 
                                         <option value="Undergraduate">Undergraduate</option> 
@@ -217,7 +190,7 @@ $(document).ready(function(){
                                 <!-- -------------------------------------------------- -->
 								<tr class="opened">
 									<td class="day_label">Occupation :</td>
-									<td class="day_value closed"> <input type="text" id="edit-name" name="occupation" value="<?php echo $occupation;?>" size="60" maxlength="60" value="<?php echo $occupation;?>" class="form-text"></td>
+									<td class="day_value closed"> <input type="text" id="edit-name" name="occupation" value="" size="60" maxlength="60" value="" class="form-text"></td>
 								</tr>
 
 
@@ -229,7 +202,7 @@ $(document).ready(function(){
 									<td class="day_value closed">
 										<div class="select-block1">
 						                    <select name="country">
-                                            <option value="<?php echo $country;?>"><?php echo $country;?></option>
+                                            <option value="Not Selected">Not Selected</option>
 						                    <option value="Bangladesh">Bangladesh</option>
                                             <option value="India">India</option> 
                                             <option value="UK">UK</option>

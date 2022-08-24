@@ -184,7 +184,7 @@ if(mysqli_num_rows($result)>=1){
 			";
 	if (mysqli_query($connect,$sql)) {
         echo "<script>alert(\"Successfully Updated Profile\")</script>";
-        echo "<script> window.location=\"user_profile.php?id=$id\"</script>";
+        echo "<script> window.location=\"add_partner_preferences.php?id=$id\"</script>";
         echo "Back to home";
         echo "</a>";
     

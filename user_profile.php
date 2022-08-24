@@ -381,6 +381,7 @@ $religion=$row['religion'];
 $education=$row['education'];
 $occupation=$row['occupation'];
 $description=$row['description'];
+$country_preference=$row['country'];
 
 
 
@@ -417,9 +418,20 @@ $description=$row['description'];
 									<td class="day_label">Education :</td>
 									<td class="day_value closed"><span><?php echo $education;?></span></td>
 								</tr>
+
 								<tr class="opened">
 									<td class="day_label">Occupation :</td>
 									<td class="day_value closed"><span><?php echo $occupation;?></span></td>
+								</tr>
+
+								<tr class="opened">
+									<td class="day_label">Country :</td>
+									<td class="day_value closed"><span><?php echo $country_preference;?></span></td>
+								</tr>
+
+								<tr class="opened">
+									<td class="day_label">My Ideal Partner Would Be :</td>
+									<td class="day_value closed"><span><?php echo $description;?></span></td>
 								</tr>
 								
 								
