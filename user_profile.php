@@ -61,8 +61,9 @@ $picture_4="";
 $sql2="SELECT * FROM user_pictures WHERE user_id = $profileid";
 $result2 = mysqli_query($connect, $sql2);
 if($result2){
-	// $row2=mysqli_fetch_array($result2);
-	// $picture_1=$row2['picture_1'];
+	$row2=mysqli_fetch_array($result2);
+
+	$picture_1=$row2['picture_1'];
 	// $picture_2=$row2['picture_2'];
 	// $picture_3=$row2['picture_3'];
 	// $picture_4=$row2['picture_4'];
@@ -145,6 +146,10 @@ $(document).ready(function(){
 					 <ul class="slides">
 
 
+
+
+
+					 
                      <!-- Edited -->
                      <!-- -------------------------------------------------- -->
 						<li data-thumb="profile/<?php echo $profileid;?>/<?php echo $picture_1;?>">
