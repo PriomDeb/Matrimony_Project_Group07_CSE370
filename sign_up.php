@@ -61,7 +61,7 @@ include_once("includes/nav_bar.php");
 		      <input type="email" id="edit-name" name="email" value="" size="60" maxlength="60" class="form-text required" required>
 		    </div>
 		    <div class="age_select">
-		      <label for="edit-pass">Age <span class="form-required" title="This field is required.">*</span></label>
+		      <label for="edit-pass">Date of Birth <span class="form-required" title="This field is required.">*</span></label>
 		        <div class="age_grid">
 		         <div class="col-sm-4 form_box">
                   <div class="select-block1">
