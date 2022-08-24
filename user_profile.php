@@ -147,13 +147,10 @@ $(document).ready(function(){
 
 
 
-
-
-					 
                      <!-- Edited -->
                      <!-- -------------------------------------------------- -->
-						<li data-thumb="profile/<?php echo $profileid;?>/<?php echo $picture_1;?>">
-							<img src="profile/<?php echo $profileid;?>/<?php echo $picture_1;?>" />
+						<li data-thumb="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>">
+							<img src="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>" />
 						</li>
 						
 
