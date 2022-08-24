@@ -83,11 +83,12 @@ include("includes/user_nav_bar.php");
         <li class="current-page">Login</li>
      </ul>
    </div>
+   <label> Upload Your Profile Picture* </label>
    <div class="services">
    	  <div class="col-sm-6 login_left">
 	   <form action="" method="post" enctype="multipart/form-data" align="center">
   	    <div class="form-item form-type-textfield form-item-name">
-	      <label for="edit-name">Upload Your Photo( Use 300 x 250 dimensions) <span class="form-required" title="This field is required.">*</span></label>
+	      <label for="edit-name"> <span class="form-required" title="This field is required."></span></label>
 	      <input type="file" id="edit-name" name="picture_1" class="form-file required"><br>
        
 	    </div>
