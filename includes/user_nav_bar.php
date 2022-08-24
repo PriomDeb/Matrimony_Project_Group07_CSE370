@@ -69,7 +69,7 @@
 		                <li><a href="search_profiles.php">Regular Search</a></li>
 		                
 		              </ul>
-					  <li><a href="index.php">Logout</a></li>  
+					  <li><a href="logout.php">Logout</a></li>  
 		            </li>
 		        </ul>
 		</div>
