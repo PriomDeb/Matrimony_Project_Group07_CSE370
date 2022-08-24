@@ -66,7 +66,7 @@ $final = $get_results -> fetch_assoc();
 <div class="banner">
   <div class="container">
     <div class="banner_info">
-      <h3> Find Some Perfect Partner for You! <?php echo $final['username'] ?> </h3>
+      <h3>Hi, <?php echo $final['username'] ?> <br> Let's Find a Perfect Partner for You! </h3>
      
     </div>
   </div>

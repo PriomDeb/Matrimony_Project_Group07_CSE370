@@ -36,7 +36,7 @@
 
            <!-- Edited  -->
            <!-- ---------------------------------------- -->
-           <a href="user_home.php"><img src="images/matrimony_logo.png" alt="logo" width="100"></a>
+           <a href="user_home.php?id=<?php echo $id; ?> "><img src="images/matrimony_logo.png" alt="logo" width="100"></a>
 
            <div class="pull-right">
           	<nav class="navbar nav_bottom" role="navigation">
