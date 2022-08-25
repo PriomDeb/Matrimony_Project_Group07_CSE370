@@ -8,18 +8,13 @@ function signup(){
         $uname=$_POST['name'];
         $pass=$_POST['pass'];
         $email=$_POST['email'];
-        $day=$_POST['day'];
-        $month=$_POST['month'];
-        $year=$_POST['year'];
-        $day=$_POST['day'];
-        $month=$_POST['month'];
-        $year=$_POST['year'];
-        $birth_date=$year ."-" . $month . "-" .$day ;
-        $gender=$_POST['gender'];
+        $secret_code=$_POST['secret_code'];
+
+        
         include("includes/connect_database.php");
     
-        $sql = "INSERT INTO users (profile_status, username, password, email, dateofbirth, gender) 
-                VALUES(0, '$uname', '$pass', '$email', '$birth_date', '$gender')";
+        $sql = "INSERT INTO users (profile_status, username, password, email, secret_code) 
+                VALUES(0, '$uname', '$pass', '$email', '$secret_code')";
         
         if (mysqli_query($connect,$sql)) {
 
