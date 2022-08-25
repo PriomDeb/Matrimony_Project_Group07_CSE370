@@ -24,7 +24,7 @@ function signup(){
 
             $_SESSION["id"] = $final["id"];
 
-            echo "<script> alert('You successfully signed up! Now login to update and view your profile.');
+            echo "<script> alert('You successfully signed up! Now update your profile information.');
             window.location.href='update_user_info.php?id={$final['id']}';
             </script>
             ";
@@ -233,7 +233,7 @@ if(mysqli_num_rows($result)>=1){
 
 
    if (mysqli_query($connect,$sql)) {
-   	echo "<script>alert(\"Successfully Updated Partner Preferences\")</script>";
+   	echo "<script>alert(\"Successfully Updated Partner Preferences. Now add a profile picture.\")</script>";
    	echo "<script> window.location=\"user_profile.php?id=$id\"</script>";
    }
 }else{
@@ -265,7 +265,7 @@ if(mysqli_num_rows($result)>=1){
 			";
 	if (mysqli_query($connect,$sql)) {
         echo "<script>alert(\"Successfully Updated Partner Preferences\")</script>";
-        echo "<script> window.location=\"user_profile.php?id=$id\"</script>";
+        echo "<script> window.location=\"upload_profile_pictures.php?id=$id\"</script>";
         echo "Back to home";
         echo "</a>";
     
