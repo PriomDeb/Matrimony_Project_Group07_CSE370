@@ -70,7 +70,7 @@ include_once("includes/nav_bar.php");
 
 			<div class="form-group">
 		      <label for="edit-name"> Secret Code - Enter your favourite color and 2 digits (Ex. yellow10) <span class="form-required" title="This field is required.">*</span></label>
-			  <p style="font-size: 12px"> This secret code will help you to reset your password when you forgot the password. </p>
+			  <p style="font-size: 12px"> This secret code will help you to reset your password when you forgot the password. <br> Please keep this code save somewhere as a backup. Otherwise you will not be able to reset your password.</p>
 		      <input type="text" id="edit-name" name="secret_code" value="" size="60" maxlength="60" class="form-text required" required>
 		    </div>
 
