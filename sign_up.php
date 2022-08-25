@@ -42,7 +42,7 @@ include_once("includes/nav_bar.php");
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Register</li>
+        <li class="current-page">Create Your Account</li>
      </ul>
    </div>
    <div class="services">
