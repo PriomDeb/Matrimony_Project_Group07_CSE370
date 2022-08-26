@@ -100,18 +100,32 @@ include("includes/user_nav_bar.php");
 
 <?php
 
-$logged_user_sex = "SELECT * FROM user_information WHERE user_id=$profileid";
-$result_sex = mysqli_query($connect, $logged_user_sex);
-$row=mysqli_fetch_assoc($result_sex);
+$logged_user_info = "SELECT * FROM user_information WHERE user_id=$profileid";
+$result_info = mysqli_query($connect, $logged_user_info);
+$row=mysqli_fetch_assoc($result_info);
 $logged_sex = $row['sex'];
 
 
-$sql_users = "SELECT * FROM user_information WHERE user_id != $profileid AND sex != '$logged_sex'";
+$logged_user_partner_preference = "SELECT * FROM partner_preferences WHERE userid=$profileid";
+$result_preferences = mysqli_query($connect, $logged_user_partner_preference);
+$row_preferences = mysqli_fetch_assoc($result_preferences);
+$age_pref_min = $row_preferences['age_min'];
+$age_pref_max = $row_preferences['age_max'];
+$marital_status_pref = $row_preferences['marital_status'];
+$height_pref_max = $row_preferences['height'] + 10;
+$height_pref_min = $row_preferences['height'] - 10;
+$religion_pref = $row_preferences['religion'];
+
+
+// Finding perfect match based on user partner preference data
+$sql_users = "SELECT * FROM user_information 
+WHERE user_id!=$profileid AND sex!='$logged_sex' AND religion='$religion_pref' 
+AND age BETWEEN '$age_pref_min' AND '$age_pref_max' AND height BETWEEN $height_pref_min AND $height_pref_max";
 $results = $connect->query($sql_users); 
 
 
 
-
+// Showing the found matches in the frontend
 while($final=$results->fetch_assoc()) { ?>
 
 
