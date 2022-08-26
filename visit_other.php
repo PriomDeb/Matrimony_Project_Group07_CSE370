@@ -113,6 +113,33 @@ $(document).ready(function(){
     );
 });
 </script>
+
+
+
+
+<html>
+
+<style>
+.button_other_profile {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button_other_profile1 {background-color: #008CBA;} 
+.button_other_profile2 {background-color: 'red';}
+.button_other_profile3 {background-color: #4CAF50;}
+</style>
+
+
+
+
 </head>
 
 
@@ -190,7 +217,7 @@ $(document).ready(function(){
 					    <tr class="closed">
 							<td class="day_label">Education :</td>
 							<td class="day_value closed"><span><?php echo $education;?></span></td>
-						</tr>
+						</tr>				
 				    </tbody>
 				</table>
 				</div>
@@ -198,6 +225,19 @@ $(document).ready(function(){
 		</div>
 
 
+
+<div>
+
+<?php
+$other_user_id = $_GET['other_id'];
+?>
+
+
+		<a href='user_home.php'><button style="background-color:#EC7272; border:none; color: #000000;">💝 Send Interest</button> </a> 
+		<a href='user_home.php'><button style="background-color:#C21010; border:none; color: #ffffff;">🚫 Block</button> </a>
+		<a href='user_home.php'><button style="background-color:#100720; border:none; color: #ffffff;">⛔ Report</button> </a>
+<hr>
+</div>
 
 
 
