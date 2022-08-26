@@ -96,15 +96,128 @@ include("includes/user_nav_bar.php");
 
 
 
+
+
 <?php
+
+
 
 $sql_users = "SELECT * FROM user_information";
 $results = $connect->query($sql_users); 
 
+
+
+
 while($final=$results->fetch_assoc()) { ?>
 
+
+<?php
+$picture_1="";
+$profileid = $final['user_id'];
+$fullName = $final['full_name'];
+$age = $final['age'];
+$height = $final['height'];
+$religion = $final['religion'];
+$maritalStatus = $final['marital_status'];
+$education = $final['education'];
+$annual_income = $final['annual_income'];
+
+
+
+
+
+// getting image filenames from db
+$sql2="SELECT * FROM user_pictures WHERE user_id = $profileid";
+$result2 = mysqli_query($connect, $sql2);
+if($result2){
+	$row2=mysqli_fetch_array($result2);
+
+	$picture_1=$row2['picture_1'];
+
+}else{
+	echo "<script>alert(\"Invalid Profile ID\")</script>";
+}
+?>
+
+
+
+
+
 <a href="visit_other.php?other_id=<?php echo $final['user_id']; ?>">
-<h3> <?php echo "Profile ID {$final['user_id']} : <br/> {$final['full_name']}"; ?> <hr> </h3>
+<h3> 
+
+
+<div class="profile">
+   	 <div class="col-md-8 profile_left">
+   	 	<div class="col_3">
+   	        <div class="col-sm-4 row_2">
+				<div class="flexslider">
+					 <ul class="slides">
+
+						<li data-thumb="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>">
+							<img src="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>" />
+						</li>
+						
+					 </ul>
+				  </div>
+
+
+
+
+
+                  </div>
+			<div class="col-sm-8 row_1">
+				<table class="table_working_hours">
+		        	<tbody>
+		        		<tr class="opened_1">
+							<td class="day_label">Name :</td>
+							<td class="day_value"><?php echo $fullName  ?></td>
+						</tr>
+
+                        <tr class="opened_1">
+							<td class="day_label">Age :</td>
+							<td class="day_value"><?php echo $age . " Years"; ?> </td>
+						</tr>
+
+                        <tr class="opened_1">
+							<td class="day_label">Height :</td>
+							<td class="day_value"><?php echo $height . " Cm";?> </td>
+						</tr>
+
+
+					  	<tr class="opened">
+							<td class="day_label">Religion :</td>
+							<td class="day_value"><?php echo $religion;?></td>
+						</tr>
+					    <tr class="opened">
+							<td class="day_label">Marital Status :</td>
+							<td class="day_value"><?php echo $maritalStatus;?></td>
+						</tr>
+					    
+					   
+					    <tr class="closed">
+							<td class="day_label">Education :</td>
+							<td class="day_value closed"><span><?php echo $education;?></span></td>
+						</tr>
+
+                        <tr class="closed">
+							<td class="day_label">Annual Income :</td>
+							<td class="day_value closed"><span><?php echo $annual_income;?></span></td>
+						</tr>
+
+
+
+				    </tbody>
+				</table>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+
+
+
+    <?php echo "Profile ID {$final['user_id']} : <br/> {$final['full_name']}"; ?> 
+
+    <hr> </h3>
 </a>
 
 
