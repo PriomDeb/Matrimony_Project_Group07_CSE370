@@ -100,9 +100,13 @@ include("includes/user_nav_bar.php");
 
 <?php
 
+$logged_user_sex = "SELECT * FROM user_information WHERE user_id=$profileid";
+$result_sex = mysqli_query($connect, $logged_user_sex);
+$row=mysqli_fetch_assoc($result_sex);
+$logged_sex = $row['sex'];
 
 
-$sql_users = "SELECT * FROM user_information";
+$sql_users = "SELECT * FROM user_information WHERE user_id != $profileid AND sex != '$logged_sex'";
 $results = $connect->query($sql_users); 
 
 
@@ -154,7 +158,7 @@ if($result2){
 				<div class="flexslider">
 
                 <?php echo "Profile ID: {$final['user_id']}"; ?>
-                
+
 					 <ul class="slides">
 						<li data-thumb="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>">
 							<img src="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>" />
