@@ -152,8 +152,10 @@ if($result2){
    	 	<div class="col_3">
    	        <div class="col-sm-4 row_2">
 				<div class="flexslider">
-					 <ul class="slides">
 
+                <?php echo "Profile ID: {$final['user_id']}"; ?>
+                
+					 <ul class="slides">
 						<li data-thumb="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>">
 							<img src="User_Profiles/<?php echo $profileid;?>/<?php echo $picture_1;?>" />
 						</li>
@@ -215,7 +217,7 @@ if($result2){
 
 
 
-    <?php echo "Profile ID {$final['user_id']} : <br/> {$final['full_name']}"; ?> 
+    <!-- <?php echo "Profile ID {$final['user_id']} : <br/> {$final['full_name']}"; ?>  -->
 
     <hr> </h3>
 </a>
