@@ -81,7 +81,7 @@ include("includes/user_nav_bar.php");
   <div class="container">
    <div class="breadcrumb1">
      <ul>
-        <a href="index.php"><i class="fa fa-home home_1"></i></a>
+        <a href=""><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
         <li class="current-page">Find Match</li>
      </ul>
