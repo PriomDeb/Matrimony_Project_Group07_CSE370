@@ -11,8 +11,6 @@ $other_user_id = $_GET['other_id'];
 
 $sql = "INSERT INTO send_interest (user_1, interest_on_user) VALUES ($logged_user_id, $other_user_id)";
 
-$results = $connect -> query($sql);
-
 
 if (mysqli_query($connect,$sql)) {
 
