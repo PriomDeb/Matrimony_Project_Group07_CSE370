@@ -156,7 +156,7 @@ if($result2){
 
 
 
-<a href="visit_other.php?other_id=<?php echo $final['user_id']; ?>">
+<a href="visit_other.php?other_id=<?php echo $final['user_id']; ?>&logged_user_id=<?php echo $id;?>">
 <h3> 
 
 
