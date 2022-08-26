@@ -233,12 +233,25 @@ $(document).ready(function(){
 $other_user_id = $_GET['other_id'];
 ?>
 
-<!-- $logged_user_id -->
+<!-- Buttons -->
 		<a href='send_interest.php?other_id=<?php echo $other_user_id ?>&logged_user_id=<?php echo $logged_user_id;?>'><button style="background-color:#EC7272; border:none; color: #000000;">💝 Send Interest</button> </a> 
 		<a href='block.php?other_id=<?php echo $other_user_id ?>&logged_user_id=<?php echo $logged_user_id;?>'><button style="background-color:#C21010; border:none; color: #ffffff;">🚫 Block</button> </a>
 		<a href='report.php?other_id=<?php echo $other_user_id ?>&logged_user_id=<?php echo $logged_user_id;?>'><button style="background-color:#100720; border:none; color: #ffffff;">⛔ Report</button> </a>
 <hr>
 </div>
+
+
+
+
+
+<form action="arrange_meeting.php" method="POST">
+  <label for="birthdaytime">Arrange a Meeting with <?php echo $fullName ?>:</label>
+  <input type="datetime-local" id="meeting_date_time" name="meeting_date_time">
+
+  <input type=hidden name=other_id value=<?php echo $other_user_id; ?>>
+  <input type=hidden name=logged_id value=<?php echo $logged_user_id; ?>>
+  <input type="submit" value="Arrange">
+</form>
 
 
 
