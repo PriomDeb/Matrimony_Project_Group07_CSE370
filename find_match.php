@@ -233,43 +233,12 @@ if($result2){
 
 
 
+
+
        <div class="clearfix"> </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
