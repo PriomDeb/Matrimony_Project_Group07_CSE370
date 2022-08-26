@@ -233,9 +233,9 @@ $other_user_id = $_GET['other_id'];
 ?>
 
 
-		<a href='user_home.php'><button style="background-color:#EC7272; border:none; color: #000000;">💝 Send Interest</button> </a> 
-		<a href='user_home.php'><button style="background-color:#C21010; border:none; color: #ffffff;">🚫 Block</button> </a>
-		<a href='user_home.php'><button style="background-color:#100720; border:none; color: #ffffff;">⛔ Report</button> </a>
+		<a href='send_interest.php?other_id=<?php echo $other_user_id ?>'><button style="background-color:#EC7272; border:none; color: #000000;">💝 Send Interest</button> </a> 
+		<a href='block.php?other_id=<?php echo $other_user_id ?>'><button style="background-color:#C21010; border:none; color: #ffffff;">🚫 Block</button> </a>
+		<a href='report.php?other_id=<?php echo $other_user_id ?>'><button style="background-color:#100720; border:none; color: #ffffff;">⛔ Report</button> </a>
 <hr>
 </div>
 
