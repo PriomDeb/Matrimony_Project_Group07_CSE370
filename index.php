@@ -69,7 +69,6 @@ $(document).ready(function(){
       <h3>Matrimony 24/7</h3>
       <a href="sign_up.php" class="hvr-shutter-out-horizontal">Sign Up</a>
 	  <a href="login_page.php" class="hvr-shutter-out-horizontal">Login</a>
-	  <a href="login.php" class="hvr-shutter-out-horizontal">Admin Login</a>
     </div>
   </div>
  
