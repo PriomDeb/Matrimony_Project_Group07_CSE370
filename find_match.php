@@ -66,10 +66,91 @@ $(document).ready(function(){
 </script>
 </head>
 
+<body>
 
 <?php 
 include("includes/user_nav_bar.php");
 ?>
+
+
+
+
+
+
+<div class="grid_3">
+  <div class="container">
+   <div class="breadcrumb1">
+     <ul>
+        <a href="index.php"><i class="fa fa-home home_1"></i></a>
+        <span class="divider">&nbsp;|&nbsp;</span>
+        <li class="current-page">Find Match</li>
+     </ul>
+   </div>
+
+
+<br/>
+
+
+
+
+
+
+
+<?php
+
+$sql_users = "SELECT * FROM user_information";
+$results = $connect->query($sql_users); 
+
+while($final=$results->fetch_assoc()) { ?>
+
+<a href="visit_other.php?other_id=<?php echo $final['user_id']; ?>">
+<h3> <?php echo "Profile ID {$final['user_id']} : <br/> {$final['full_name']}"; ?> <hr> </h3>
+</a>
+
+
+
+<?php }
+?>
+
+
+
+
+
+
+
+
+
+       <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
