@@ -19,6 +19,7 @@ if(isLogged()){
 }
  
 $id=$_GET['other_id'];
+$logged_user_id = $_GET['logged_user_id'];
 //safty purpose copy the get id
 $profileid=$id;
 
@@ -232,10 +233,10 @@ $(document).ready(function(){
 $other_user_id = $_GET['other_id'];
 ?>
 
-
-		<a href='send_interest.php?other_id=<?php echo $other_user_id ?>'><button style="background-color:#EC7272; border:none; color: #000000;">💝 Send Interest</button> </a> 
-		<a href='block.php?other_id=<?php echo $other_user_id ?>'><button style="background-color:#C21010; border:none; color: #ffffff;">🚫 Block</button> </a>
-		<a href='report.php?other_id=<?php echo $other_user_id ?>'><button style="background-color:#100720; border:none; color: #ffffff;">⛔ Report</button> </a>
+<!-- $logged_user_id -->
+		<a href='send_interest.php?other_id=<?php echo $other_user_id ?>&logged_user_id=<?php echo $logged_user_id;?>'><button style="background-color:#EC7272; border:none; color: #000000;">💝 Send Interest</button> </a> 
+		<a href='block.php?other_id=<?php echo $other_user_id ?>&logged_user_id=<?php echo $logged_user_id;?>'><button style="background-color:#C21010; border:none; color: #ffffff;">🚫 Block</button> </a>
+		<a href='report.php?other_id=<?php echo $other_user_id ?>&logged_user_id=<?php echo $logged_user_id;?>'><button style="background-color:#100720; border:none; color: #ffffff;">⛔ Report</button> </a>
 <hr>
 </div>
 
