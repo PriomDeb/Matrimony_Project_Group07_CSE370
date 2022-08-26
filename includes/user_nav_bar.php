@@ -45,7 +45,7 @@
 		        <ul class="nav navbar-nav nav_1">
 		            <li><a href="user_profile.php?id=<?php echo $id;?>">My Profile</a></li>
 		            <li><a href="update_partner_preferences.php?id=<?php echo $id;?>">Partner Preference</a></li>
-					<li><a href="find_match.php">Find Match</a></li>
+					<li><a href="find_match.php?id=<?php echo $id;?>">Find Match</a></li>
 		    		<li class="dropdown">
 
 
