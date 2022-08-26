@@ -66,7 +66,7 @@
 					<li class="dropdown">
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
-		                <li><a href="search_profiles.php">Regular Search</a></li>
+		                <li><a href="search_profiles.php?id=<?php echo $id;?>">Regular Search</a></li>
 		                
 		              </ul>
 					  <li><a href="logout.php">Logout</a></li>  
