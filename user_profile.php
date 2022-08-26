@@ -132,7 +132,7 @@ $(document).ready(function(){
   <div class="container">
    <div class="breadcrumb1">
      <ul>
-        <a href="user_index.php"><i class="fa fa-home home_1"></i></a>
+        <a href=""><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
         <li class="current-page">View Profile</li>
      </ul>
