@@ -80,7 +80,7 @@ include("includes/user_nav_bar.php");
      <ul>
         <a href="user_index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Upload Profile Picture</li>
+        <li class="current-page">Upload Picture</li>
      </ul>
    </div>
    <label> Upload Your Profile Picture* </label>
