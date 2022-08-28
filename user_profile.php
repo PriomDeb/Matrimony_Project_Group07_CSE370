@@ -134,7 +134,7 @@ $(document).ready(function(){
      <ul>
         <a href=""><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">My Profile</li>
+        <li class="current-page">View Profile</li>
      </ul>
    </div>
    <div class="profile">
