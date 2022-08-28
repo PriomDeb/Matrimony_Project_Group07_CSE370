@@ -95,7 +95,7 @@ $(document).ready(function(){
      <ul>
         <a href="index.php"><i class="fa fa-home home_1"></i></a>
         <span class="divider">&nbsp;|&nbsp;</span>
-        <li class="current-page">Partner Prefernces</li>
+        <li class="current-page">Update Partner Prefernces</li>
      </ul>
    </div>
 
