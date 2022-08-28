@@ -69,7 +69,7 @@ include("includes/nav_bar.php");
 	    <div class="form-actions">
 
 			<!-- Edited -->
-	    	<input type="submit" id="edit-submit" name="login" value="Log in" class="btn_1 submit" method="POST">
+	    	<input type="submit" id="edit-submit" name="login" value="Reset" class="btn_1 submit" method="POST">
 	    </div>
 	   </form>
 	  </div>
