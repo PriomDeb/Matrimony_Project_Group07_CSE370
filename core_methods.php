@@ -86,6 +86,9 @@ function update_profile($id){
 
     $father_info=$_POST['father'];
     $mother_info=$_POST['mother'];
+
+    $address=$_POST['address'];
+    $phone=$_POST['phone'];
 	
 
 	include("includes/connect_database.php");
@@ -118,7 +121,9 @@ if(mysqli_num_rows($result)>=1){
         blood_group = '$bloodGroup',
 		about_me = '$aboutMe',
         father_name_and_occupation = '$father_info',
-        mother_name_and_occupation = '$mother_info'
+        mother_name_and_occupation = '$mother_info',
+        address = '$address',
+        phone = '$phone'
 		WHERE user_id=$id;";
 
 //    $result=mysqlexec($sql);
@@ -152,7 +157,9 @@ if(mysqli_num_rows($result)>=1){
                    brothers_number,
                    sisters_number,  
                    about_me, 
-                   information_updated_date) 
+                   information_updated_date,
+                   address,
+                   phone) 
 				VALUES
 				   ('$id', 
                    '$age', 
@@ -174,7 +181,9 @@ if(mysqli_num_rows($result)>=1){
                    '$mother_info',  
                    '$brother', 
                    '$sister', 
-                   '$aboutMe', 
+                   '$aboutMe',
+                   '$address',
+                   '$phone', 
                    CURDATE())
 			";
 	if (mysqli_query($connect,$sql)) {

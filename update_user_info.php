@@ -443,14 +443,26 @@ include("includes/user_nav_bar.php");
 
 
             <div class="form-group">
-		    	<label for="about me">Mother's Name and Occupation<span class="form-required" title="This field is required.">*</span></label>
+		    	<label for="about me">Mother's Name and Occupation:<span class="form-required" title="This field is required.">*</span></label>
 		    	<textarea rows="2" name="mother" placeholder="Write name, occupation" class="form-text"></textarea>
 		    </div>
 
 
             <div class="form-group">
-		    	<label for="about me">Father's Name and Occupation<span class="form-required" title="This field is required.">*</span></label>
+		    	<label for="about me">Father's Name and Occupation:<span class="form-required" title="This field is required.">*</span></label>
 		    	<textarea rows="2" name="father" placeholder="Write name, occupation" class="form-text"></textarea>
+		    </div>
+
+			<br/>
+
+			<div class="form-group">
+		    	<label for="about me">Your Address:<span class="form-required" title="This field is required.">*</span></label>
+		    	<textarea rows="2" name="address" placeholder="Write name, occupation" class="form-text"></textarea>
+		    </div>
+
+			<div class="form-group">
+		    	<label for="about me">Phone Number:<span class="form-required" title="This field is required.">*</span></label>
+		    	<textarea rows="2" name="phone" placeholder="Write name, occupation" class="form-text"></textarea>
 		    </div>
 
 

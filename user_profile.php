@@ -49,13 +49,13 @@ $mother_info=$row['mother_name_and_occupation'];
 $brother=$row['brothers_number'];
 $sister=$row['sisters_number'];
 $aboutMe=$row['about_me'];
+$address=$row['address'];
+$phone=$row['phone'];
 
 
 
 $picture_1="";
-$picture_2="";
-$picture_3="";
-$picture_4="";
+
 
 // getting image filenames from db
 $sql2="SELECT * FROM user_pictures WHERE user_id = $profileid";
@@ -64,9 +64,7 @@ if($result2){
 	$row2=mysqli_fetch_array($result2);
 
 	$picture_1=$row2['picture_1'];
-	// $picture_2=$row2['picture_2'];
-	// $picture_3=$row2['picture_3'];
-	// $picture_4=$row2['picture_4'];
+	
 }
 }else{
 	echo "<script>alert(\"Invalid Profile ID\")</script>";
@@ -308,6 +306,35 @@ $(document).ready(function(){
 				          </table>
 				         </div>
 				         <div class="clearfix"> </div>
+
+
+
+
+
+
+						 <div class="basic_1 basic_2">
+				    	<h3>Contact Details</h3>
+				    	<div class="basic_1-left">
+				    	  <table class="table_working_hours">
+				        	<tbody>
+				        		<tr class="opened">
+									<td class="day_label">Address:</td>
+									<td class="day_value"><?php echo $address;?></td>
+								</tr>
+				        	
+							    <tr class="opened">
+									<td class="day_label">Phone Number:</td>
+									<td class="day_value closed"><span><?php echo $phone;?></span></td>
+								</tr>
+							 </tbody>
+				          </table>
+				         </div>
+				         <div class="clearfix"> </div>
+
+
+
+
+
 				    </div>
 				  </div>
 
